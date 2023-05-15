@@ -1,33 +1,17 @@
-/**
- * Η κλάση Contact περιγράφει μία επαφή που βρίσκεται σε μία εφαρμογή διαχείρισης επαφών.
- * @mscict22049
- */
-public class Contact
-{
+public class Contact {
     private String name;
-    private String surname;
-    private String telnumber;
+    private String phone;
     private String email;
     private String address;
 
-
-
-    /**
-     * Αρχικοποιεί μία επαφή. Η αρχικοποίηση περιλαμβάνει όλα τα attributes.
-     * @param name Η τιμή που θα εκχωρηθεί στο όνομα της επαφής
-     * @param surname Η τιμή που θα εκχωρηθεί στο επώνυμο της επαφής
-     * @param telnumber Η τιμή που θα εκχωρηθεί στο νούμερο τηλεφώνου της επαφής
-     * @param email Η τιμή που θα εκχωρηθεί στο email της επαφής
-     * @param address Η τιμή που θα εκχωρηθεί στη διεύθυνση της επαφής
-     */
-
-    public Contact(String name, String surname, String telnumber, String email, String address) {
+    public Contact(String name, String phone, String email, String address) {
         this.name = name;
-        this.surname = surname;
-        this.telnumber = telnumber;
+        this.phone = phone;
         this.email = email;
         this.address = address;
     }
+
+    // Getters and Setters
 
     public String getName() {
         return name;
@@ -37,20 +21,12 @@ public class Contact
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getTelnumber() {
-        return telnumber;
-    }
-
-    public void setTelnumber(String telnumber) {
-        this.telnumber = telnumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {
@@ -67,28 +43,6 @@ public class Contact
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    /**
-     * Τυπώνει στην οθόνη την καρτέλα της επαφής. Περιλαμβάνει όλα τα χαρακτηριστικά της.
-     */
-    public void Print ()
-    {
-        System.out.println("Επώνυμο επαφής:.... " + name);
-        System.out.println("Όνομα επαφής:.... " + surname);
-        System.out.println("Νούμερο τηλεφώνου επαφής:.... " + telnumber);
-        System.out.println("Email επαφής:.... " + email);
-        System.out.println("Διεύθυνση επαφής:.... " + address);
-    }
-
-    /**
-     * Επιστρέφει όλα τα χαρακτηριστικά της επαφής σε μία συμβολοσειρά.
-     * @return Η συμβολοσειρά με όλα τα χαρακτηριστικά.
-     */
-    @Override
-    public String toString ()
-    {
-        return name + ", " + surname + ", " +telnumber + ", " +email + ", " +address;
     }
 }
 
